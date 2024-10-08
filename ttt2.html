@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tic-Tac-Toe Version #2</title>
+    <style type="text/css">
+      body,
+      html {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .square {
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+        border: 1px, solid black;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+      }
+
+      #full_board {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        width: 337px;
+      }
+
+      .square:hover {
+        background-color: rgb(234, 255, 0);
+      }
+
+      h1 {
+        text-align: center;
+        color: rgba(39, 212, 4, 0.772);
+        margin-top: 50px;
+        border: 4px, solid rgba(39, 212, 4, 0.772);
+        display: inline-block;
+        font-weight: bold;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      h1:hover {
+        background-color: rgb(85, 255, 0);
+        color: rgb(234, 255, 41);
+        border: 4px, dashed rgba(39, 212, 4, 0.772);
+        padding: 10px;
+      }
+
+      #turn_tracker {
+        border: 1px, solid black;
+        background-color: rgb(209, 209, 209);
+        font-size: 25px;
+        margin-bottom: 30px;
+        display: inline-block;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      #win_condition {
+        border: 1px, solid black;
+        background-color: rgb(118, 223, 130);
+        font-size: 23px;
+        margin-top: 45px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>X-CITING AND O-VERWHELMINGLY FUN!</h1>
+    <br />
+    <div id="turn_tracker">Player X's Turn</div>
+    <div id="full_board">
+      <script>
+        const NUM_SQUARES = 9;
+        for (i = 0; i < NUM_SQUARES; i++) {
+          id = "sq" + i;
+          document.write("<div class='square' id='" + id + "'></div>");
+        }
+
+        document.getElementById("sq2").innerText = "X";
+        document.getElementById("sq3").innerText = "O";
+      </script>
+      <div id="win_condition">Winner: To Be Determined</div>
+    </div>
+  </body>
+</html>
